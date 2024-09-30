@@ -1,5 +1,5 @@
 # Gregor U.
-# 17/FEB/2024
+# 30/SEP/2024
 
 # Importing the DLL
 from Lists import *
@@ -10,16 +10,18 @@ lista.addFirst(3)
 lista.addFirst(2)
 lista.addLast(5)
 lista.addLast(8)
-print('\nArray : {} '.format(lista.show()))
+print('\nDLL : {}'.format(lista.show()))
 backup = lista.show()
-print('Current First : {} \nCurrent Last : {} \n'.format(lista.getFirst().getValue(), lista.getLast().getValue()))
+print('Current First : {} \nCurrent Last : {} '.format(lista.getFirst().getValue(), lista.getLast().getValue()))
+print('Size : {} \n'.format(len(lista)))
 lista.removeFirst()
 lista.removeLast()
-print('Array : {} '.format(lista.show()))
-print('Current First : {} \nCurrent Last : {} \n'.format(lista.getFirst().getValue(), lista.getLast().getValue()))
+print('DLL : {} '.format(lista.show()))
+print('Current First : {} \nCurrent Last : {} '.format(lista.getFirst().getValue(), lista.getLast().getValue()))
+print('Size : {} \n'.format(len(lista)))
 lista.removeAll()
-print('Array : {}'.format(lista.show()))
+print('DLL : {}'.format(lista.show()))
 print('Is it empty? {} \n'.format(lista.isEmpty()))
 lista.absorb(backup)
-print('Array : {}'.format(lista.show()))
+print('DLL : {}'.format(lista.show()))
 print('Is it empty? {} \n'.format(lista.isEmpty()))
