@@ -1,5 +1,5 @@
 # Gregor U.
-# 17/FEB/2024
+# 30/SEP/2024
 
 # Private Class Node
 class _Node:
@@ -37,8 +37,8 @@ class DLL:
         self.header.setNext(self.trailer)
         self.trailer.setPrev(self.header)
 
-    # Get size
-    def getSize(self) :
+    # Override on len() to get the size
+    def __len__(self) :
         return self.size
     
     # To know if the DLL is empty
@@ -81,13 +81,13 @@ class DLL:
     
     # Removes the element at the "head / start / top" of the DLL (if possible)
     def removeFirst(self) :
-        if (self.isEmpty) :
+        if (self.isEmpty()) :
             return None
         return self._removeNode(self.header.getNext())
     
     # Removes the element at the "tail / end / bottom" of the DLL (if possible)
     def removeLast(self) :
-        if (self.isEmpty) :
+        if (self.isEmpty()) :
             return None
         return self._removeNode(self.trailer.getPrev())
     
